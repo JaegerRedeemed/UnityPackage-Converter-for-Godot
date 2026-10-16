@@ -1,0 +1,5 @@
+pyyaml>=6.0
+pillow>=10.0
+
+# Optional: enables drag-and-drop of .unitypackage files onto the GUI
+tkinterdnd2>=0.3.0
