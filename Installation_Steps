@@ -1,0 +1,32 @@
+Installation steps
+
+1. Install Python 3.9 or newer.
+Download it from python.org. On Windows, tick “Add Python to PATH” in the installer. Check it worked with python --version.
+
+2. Put the files in a folder.
+Place unity2godot.py and requirements.txt together, for example in C:\Tools\Unity2Godot or ~/Tools/Unity2Godot.
+
+3. (Recommended) Create a virtual environment.
+Open a terminal in that folder and run:
+
+python -m venv venv
+
+Then activate it:
+
+Windows: venv\Scripts\activate
+macOS/Linux: source venv/bin/activate
+
+4. Install the dependencies.
+
+pip install -r requirements.txt
+
+If you don’t want drag-and-drop, delete the tkinterdnd2 line first. It’s optional.
+
+5. Run it.
+
+GUI: python unity2godot.py
+CLI: python unity2godot.py MyPack.unitypackage -o /path/to/godot_project/unity_import
+Troubleshooting
+“No module named tkinter” on Linux: install it with sudo apt install python3-tk. It comes bundled on Windows and macOS.
+pip not found: use python -m pip install -r requirements.txt.
+Skipping Pillow: the tool still runs, but it can’t bake roughness maps or convert .tif/.psd files, so keep it installed.
